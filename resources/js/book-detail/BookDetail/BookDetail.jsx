@@ -15,7 +15,11 @@ export default function BookDetail(props) {
                     <img src={ book.image } alt=""/>
                 </div>
 
+<<<<<<< HEAD
                 <Link to={ `/book/${book.id}/review` }>Review this book</Link>
+=======
+                <Link to={ `/book/${book.id}/review`}>Review this Book</Link> 
+>>>>>>> bb8218fb14226e4103e39818ac84b80c814f02cd
 
             </div>
 
@@ -23,9 +27,16 @@ export default function BookDetail(props) {
 
                 {
                     props.success_message ? (
+<<<<<<< HEAD
                         <div className="success-message">{ props.success_message }</div>
                     ) : ''
                 }
+=======
+                        <div className="success-message">{props.success_message}</div>
+                    ) : ''
+                }
+                
+>>>>>>> bb8218fb14226e4103e39818ac84b80c814f02cd
 
                 <h1 className="book-detail__title">{ book.title }</h1>
 

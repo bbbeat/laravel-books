@@ -100,8 +100,13 @@ class BookController extends Controller
     public function show($book_id)
     {
         $book = Book::with('authors')
+<<<<<<< HEAD
             ->with('reviews')
             ->findOrFail($book_id);
+=======
+        ->with('reviews')
+        ->findOrFail($book_id);
+>>>>>>> bb8218fb14226e4103e39818ac84b80c814f02cd
 
         return [
             'id' => $book->id,
@@ -126,6 +131,7 @@ class BookController extends Controller
         ];
     }
 
+<<<<<<< HEAD
     /**
      * handles the submission of the review form
      */
@@ -133,6 +139,12 @@ class BookController extends Controller
     {
         $this->validate($request, [
             'rating' => 'required|numeric|min:0|max:100',
+=======
+    public function review(Request $request, $book_id)
+    {
+        $this-> validate($request, [
+            'rating' => 'required|min:0|max:100',
+>>>>>>> bb8218fb14226e4103e39818ac84b80c814f02cd
             'text' => 'required|max:1000'
         ]);
 
@@ -150,9 +162,16 @@ class BookController extends Controller
         $review->text = $request->input('text');
         $review->save();
 
+<<<<<<< HEAD
         return [
             'status' => 'success',
             'message' => 'Review was successfully saved'
+=======
+
+        return [
+            'status' => 'success',
+            'message' => 'Review was successfuly saved'
+>>>>>>> bb8218fb14226e4103e39818ac84b80c814f02cd
         ];
     }
 
@@ -160,8 +179,16 @@ class BookController extends Controller
     {
         $user_id = 1;
 
+<<<<<<< HEAD
         $review = Review::where('book_id', $book_id)->where('user_id', $user_id)->firstOrFail();
 
         return $review;
     }
 }
+=======
+        $review =Review::where('book_id', $book_id)->where('user_id', $user_id)->firstOrFail();
+
+        return $review;
+    }
+}
+>>>>>>> bb8218fb14226e4103e39818ac84b80c814f02cd

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -36,10 +37,17 @@ export default function App() {
     return (
         <Switch>
             <Route path="/book/:id/review">
+<<<<<<< HEAD
                 <BookReview id={ bookId } book={ book } setSuccessMessage={ setSuccessMessage } reloadBook={ loadData } />
             </Route>
             <Route path="/book/:id">
                 <BookDetail id={ bookId } book={ book } success_message={ success_message } />
+=======
+                <BookReview id={ bookId } book={ book } setSuccessMessage={ setSuccessMessage}/>
+            </Route>
+            <Route path="/book/:id">
+                <BookDetail id={ bookId } book={ book } success_message={ success_message } />  
+>>>>>>> bb8218fb14226e4103e39818ac84b80c814f02cd
             </Route>
         </Switch>
     )

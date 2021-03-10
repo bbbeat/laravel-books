@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> bb8218fb14226e4103e39818ac84b80c814f02cd
     <title>{{ $title ?? '' }} | {{ env('APP_NAME') }}</title>
 
     <link rel="stylesheet" href="{{ mix('css/books.css') }}">

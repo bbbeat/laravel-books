@@ -46,10 +46,19 @@ Route::get('/books/latest', 'Api\BookController@latest');
 //      /api/books/123
 Route::get('/books/{book_id}', 'Api\BookController@show');
 
+<<<<<<< HEAD
 // handle the review form's submission
 //       /api/books/review/123
 Route::post('/books/review/{book_id}', 'Api\BookController@review');
 
 // get detail about this user's review of a book
 //      /api/books/review/123
+=======
+// handle the reviews form's sbumission
+//      /api/books/review/{book_id}
+Route::post('/books/review/{book_id}', 'Api\BookController@review');
+
+// handle the reviews form's sbumission
+//      /api/books/review/{book_id}
+>>>>>>> bb8218fb14226e4103e39818ac84b80c814f02cd
 Route::get('/books/review/{book_id}', 'Api\BookController@showReview');

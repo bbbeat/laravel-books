@@ -8,7 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Author;
 use App\Models\Category;
 use App\Models\Publisher;
+<<<<<<< HEAD
 use App\Models\Review;
+=======
+use pp\Models\Reviews;
+>>>>>>> bb8218fb14226e4103e39818ac84b80c814f02cd
 
 class Book extends Model
 {
