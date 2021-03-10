@@ -25,6 +25,8 @@ export default function Login(props) {
         });
         const response_data = await response.json();
 
+        // props.setToken(response_data.token);
+
         // if (Math.floor(response.status / 100) == 2) {
         //     location.href = '/';
         //     // location.reload();

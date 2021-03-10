@@ -37267,15 +37267,30 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function App() {
-  var _useState = useState(localStorage.getItem('api_token')),
+  // const [api_token, setApiToken] = useState(localStorage.getItem('api_token'));
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
-      api_token = _useState2[0],
-      setApiToken = _useState2[1];
+      user = _useState2[0],
+      setUser = _useState2[1]; // const setToken = (token) => {
+  //     setApiToken(token);
+  //     localStorage.setItem('api_token', token);
+  // }
+  // const loadCurrentUser = () => {
+  //     console.log('loading current user info');
+  // const response = await fetch('/api/user', {
+  //     header: {
+  //         'Accept': 'application/json',
+  //         'Content-type': 'application/json',
+  //         'Authorization': `Bearer ${api_token}`
+  //     }
+  // })
+  // const data =  await response.json();
+  // }
+  // usseEffect(() => {
+  //     if (api_token) {
+  //     }
+  // }, [api_token]);
 
-  var setToken = function setToken(token) {
-    setApiToken(token);
-    localStorage.setItem(token);
-  };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.BrowserRouter, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {

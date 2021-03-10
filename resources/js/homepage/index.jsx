@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import {
     BrowserRouter as Router,
@@ -15,12 +15,33 @@ import './index.scss';
 
 function App() {
 
-    const [api_token, setApiToken] = useState(localStorage.getItem('api_token'));
-    
-    const setToken = (token) => {
-        setApiToken(token);
-        localStorage.setItem(token);
-    }
+    // const [api_token, setApiToken] = useState(localStorage.getItem('api_token'));
+
+    const [user, setUser] = useState(null);
+
+    // const setToken = (token) => {
+    //     setApiToken(token);
+    //     localStorage.setItem('api_token', token);
+    // }
+
+    // const loadCurrentUser = () => {
+    //     console.log('loading current user info');
+    // const response = await fetch('/api/user', {
+    //     header: {
+    //         'Accept': 'application/json',
+    //         'Content-type': 'application/json',
+    //         'Authorization': `Bearer ${api_token}`
+    //     }
+    // })
+    // const data =  await response.json();
+
+    // }
+
+    // usseEffect(() => {
+    //     if (api_token) {
+
+    //     }
+    // }, [api_token]);
 
     return (
         <Router>
