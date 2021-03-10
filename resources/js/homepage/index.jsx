@@ -15,6 +15,13 @@ import './index.scss';
 
 function App() {
 
+    const [api_token, setApiToken] = useState(localStorage.getItem('api_token'));
+    
+    const setToken = (token) => {
+        setApiToken(token);
+        localStorage.setItem(token);
+    }
+
     return (
         <Router>
             <>
