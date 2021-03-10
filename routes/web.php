@@ -18,5 +18,20 @@ Route::get('/', 'IndexController@index');
 Route::get('/books', 'BookController@index');
 
 Route::get('/home', 'IndexController@home');
+Route::get('/home/login', 'IndexController@home');
 
 Route::view('/book/{book_id}/{path?}', 'book/detail')->where(['book_id' => '^\d+$', 'path' => '.*']);
+
+Route::view('/login', 'auth/react')->name('login');
+
+Route::view('/register', 'auth/react')->name('register');
+
+Route::get('/register', function() {
+
+    if (Auth::check()) {
+        return redirect('/');
+    } else {
+        return view('auth/react');
+    }
+
+})->name('register');
